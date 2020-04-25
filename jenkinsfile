@@ -1,0 +1,78 @@
+pipeline {
+	agent any 
+		stages{
+			stage('Code merge'){
+				steps{
+					 echo "executing Code merge"
+			    }
+		    }
+		    stage('Unit tests'){
+				steps{
+					echo "executing Unit tests"
+				}
+		    }
+		    stage('Deploy to test env'){
+				steps{
+					echo "Deploy to test env"
+				}
+	
+		    }
+        	stage('Integration tests'){
+        		steps{
+        			echo "executing Integration tests"
+        		}
+        	}
+        	stage('Deploy to staging env'){
+        		steps{
+        			echo "executing Deploy to staging env"
+        		}
+        	}
+        	stage('Acceptance Test'){
+        		steps{
+        			echo "Acceptance Test"
+        		}
+
+        	}
+
+            stage('End to End test'){
+                steps{
+                	echo "executing End to End test"
+                }
+            }
+            stage('To production'){
+                steps{
+                	echo "To production"
+                }
+            }
+            stage('Regression test'){
+                steps{
+                	echo "Regression test"
+                }
+
+            }
+            stage('Smoke test'){
+                steps{
+                    echo "Smoke test"
+                }
+
+            }
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
